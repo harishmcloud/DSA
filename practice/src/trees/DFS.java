@@ -21,6 +21,13 @@ public class DFS {
         preOrder(root.right);
     }
 
+    private static void postOrder(Node root) {
+        if(root == null) return;
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.data + " ");
+    }
+
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);
@@ -35,6 +42,9 @@ public class DFS {
         System.out.println();
         System.out.print("Preorder: ");
         preOrder(root);
+        System.out.println();
+        System.out.print("Postorder: ");
+        postOrder(root);
         System.out.println();
     }
 }
