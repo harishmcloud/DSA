@@ -9,6 +9,7 @@ public class BFS {
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
         Queue<Node> q = new ArrayDeque<>();
 
+        if(root == null) return ans;
         q.offer(root);
         while(!q.isEmpty()) {
             ArrayList<Integer> list = new ArrayList<>();
